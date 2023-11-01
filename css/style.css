@@ -20,6 +20,12 @@ img {
 
 header {
     background-color: #585C7C;
+    position: fixed;
+    width: 100%;
+}
+
+main {
+    padding-top: 148px;
 }
 
 .pg-padding {
@@ -33,6 +39,7 @@ header {
     display: grid;
     grid-template-columns: 3fr 2fr 1fr;
     grid-gap: 50px;
+    /* position: relative; */
 }
 
 body {
@@ -134,6 +141,9 @@ h3 {
 
 .button-gold {
     background-color: #FFB859;
+    /* position: absolute;
+    bottom: 20px;
+    right: 20px; */
 }
 
 .button-gold:hover {
