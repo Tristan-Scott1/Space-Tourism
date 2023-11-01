@@ -21,6 +21,7 @@ img {
 header {
     background-color: #585C7C;
     position: fixed;
+    z-index: 9;
     width: 100%;
 }
 
@@ -39,7 +40,7 @@ main {
     display: grid;
     grid-template-columns: 3fr 2fr 1fr;
     grid-gap: 50px;
-    /* position: relative; */
+    position: relative;
 }
 
 body {
@@ -141,9 +142,9 @@ h3 {
 
 .button-gold {
     background-color: #FFB859;
-    /* position: absolute;
+    position: absolute;
     bottom: 20px;
-    right: 20px; */
+    right: 20px;
 }
 
 .button-gold:hover {
@@ -167,4 +168,41 @@ h3 {
 .other-trips>div:nth-child(3) {
     grid-column: 2;
     text-align: right;
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        background: pink;
+    }
+    .feature {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    .feature > div:first-child {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .gold-bkg {
+        grid-template-columns: 1fr;
+    }
+    .center-column {
+        grid-column: 1;
+    }
+    .other-trips {
+        grid-template-columns: 1fr;
+    }
+    .other-trips>div:nth-child(4) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .other-trips>div:nth-child(2) {
+        text-align: center;
+    }
+    .other-trips>div:nth-child(3) {
+        grid-column: 1;
+        text-align: center;   
+    }
+
 }
